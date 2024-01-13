@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {
+            "id": "<test-excluded-project-id>",
+            "owner": "<owner-email>"
+        }
+    ],
+    "groups": []
+}

@@ -1,0 +1,49 @@
+{
+  "name": "registry-retention-management",
+  "version": "1.0.0",
+  "description": "The project geta a gitlab token, runs through json file which contains gitlab projects and config registry cleanup policy for each one.",
+  "main": "main.js",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.454.0",
+    "ansi-regex": "^5.0.1",
+    "ansi-styles": "^4.3.0",
+    "asynckit": "^0.4.0",
+    "aws-sdk": "^2.1500.0",
+    "axios": "^1.6.2",
+    "cliui": "^8.0.1",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "combined-stream": "^1.0.8",
+    "delayed-stream": "^1.0.0",
+    "emoji-regex": "^8.0.0",
+    "escalade": "^3.1.1",
+    "follow-redirects": "^1.15.3",
+    "form-data": "^4.0.0",
+    "get-caller-file": "^2.0.5",
+    "is-fullwidth-code-point": "^3.0.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "proxy-from-env": "^1.1.0",
+    "require-directory": "^2.1.1",
+    "string-width": "^4.2.3",
+    "strip-ansi": "^6.0.1",
+    "winston": "^3.11.0",
+    "wrap-ansi": "^7.0.0",
+    "y18n": "^5.0.8",
+    "yargs": "^17.7.2",
+    "yargs-parser": "^21.1.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.zooz.co/ops/registry-retention-management"
+  },
+  "author": "Shai Halfon",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

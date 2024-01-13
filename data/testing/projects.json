@@ -1,0 +1,16 @@
+{
+    "projects": [
+    {
+        "id": "<test-project-id>",
+        "settings": {
+            "cadence": "3month"
+        }
+    },
+    {
+        "id": "<test-excluded-project-id>",
+        "settings": {
+            "cadence": "1d"
+        }
+    }
+    ]
+}

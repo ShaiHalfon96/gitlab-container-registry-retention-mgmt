@@ -1,0 +1,11 @@
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# CI-Runner Files
+ci_runner_image/
+
+.DS_Store

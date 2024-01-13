@@ -1,0 +1,46 @@
+image: node:21
+stages:
+  - test
+  - deploy
+variables:
+  AWS_SECRET: "<your-aws-secret-name-here>"
+  PROJECTS_PATH: "./data/projects.json"
+  EXCLUDED_PATH: "./data/excludedProjects.json"
+
+before_script:
+  - npm install
+
+dry-run:
+  stage: test
+  script:
+    - node ./src/main.js --aws-secret $AWS_SECRET --json-file $PROJECTS_PATH --excluded-json-file $EXCLUDED_PATH --dry-run
+  tags:
+    - eks-dev-kube-system
+  artifacts:
+    name: "%CI_JOB_STAGE%-%CI_COMMIT_REF_NAME%"
+    paths: 
+      - logs/
+    expire_in: 1 week
+  when: manual
+  
+unit-test:
+  stage: test
+  script:
+    - npm list -g
+    - npm test
+  tags:
+    - eks-dev-kube-system
+  when: manual
+
+deploy:
+  stage: deploy
+  script:
+    - node ./src/main.js --aws-secret $AWS_SECRET --json-file $PROJECTS_PATH --excluded-json-file $EXCLUDED_PATH
+  tags:
+    - eks-dev-kube-system
+  artifacts:
+    name: "%CI_JOB_STAGE%-%CI_COMMIT_REF_NAME%"
+    paths: 
+      - logs/
+    expire_in: 1 week
+  when: manual

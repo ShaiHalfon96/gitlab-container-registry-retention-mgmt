@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "owner": "<owner-email>"
+        }
+    ],
+    "groups": [
+        {
+            "id": 0,
+            "owner": "<owner-email>"
+        },
+        {
+            "id": 0,
+            "owner": "<owner-email>"
+        }
+    ]
+}
